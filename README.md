@@ -29,4 +29,4 @@ The code was compiled and tested using the following:
         access to the Secure Element (SE) that's ships with Nexus S
       - Google doesn't share the credentials to access the SE
     - Credit card emulation should be possible with Android's Host Card
-      - Emulation (HCE) API
+      Emulation (HCE) API introduced in Android 4.4
