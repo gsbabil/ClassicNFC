@@ -1,0 +1,64 @@
+ <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.gsbabil.nfc"
+    android:versionCode="1"
+    android:versionName="1.0" xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.NFC" />
+    <!-- <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" /> -->    
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:name="android.hardware.nfc"
+        android:required="true" />
+    
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name" 
+        android:allowBackup="true" 
+        android:theme="@android:style/Theme.Holo" >
+
+        <uses-library
+        android:name="com.android.nfc_extras"
+        android:required="true" />
+        
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main" >
+            
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            
+            <intent-filter>
+                <action android:name="android.nfc.action.TECH_DISCOVERED" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <meta-data
+                    android:name="android.nfc.action.TECH_DISCOVERED"
+                    android:resource="@xml/nfc_tech_filter" />
+            </intent-filter>
+             
+        </activity>
+
+        <receiver android:name="com.gsbabil.nfc.SEReceiver" tools:ignore="ExportedReceiver">
+            <intent-filter>
+                <action android:name="com.android.nfc_extras.action.AID_SELECTED" />
+                <action android:name="com.android.nfc_extras.action.APDU_RECEIVED" />
+                <action android:name="com.android.nfc_extras.action.MIFARE_ACCESS_DETECTED" />
+                <action android:name="android.intent.action.MASTER_CLEAR_NOTIFICATION" />
+                <action android:name="com.android.nfc_extras.action.RF_FIELD_ON_DETECTED" />
+                <action android:name="com.android.nfc_extras.action.RF_FIELD_OFF_DETECTED" />
+                <action android:name="com.android.nfc_extras.action.EMV_CARD_REMOVAL" />
+                <action android:name="com.android.nfc.action.INTERNAL_TARGET_DESELECTED" />
+            </intent-filter>
+        </receiver>
+
+      </application>
+
+</manifest>

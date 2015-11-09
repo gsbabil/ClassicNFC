@@ -1,0 +1,129 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal" >
+
+        <Button
+            android:id="@+id/gp_info_button"
+            android:layout_width="100dp"
+            android:layout_height="55dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="GP Details"
+            android:fontFamily="Monospace"
+            android:textSize="15sp"
+            android:onClick="onClick"
+            android:longClickable="true"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/wallet_info_button"
+            android:layout_width="100dp"
+            android:layout_height="55dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="Wallet Details"
+            android:fontFamily="Monospace"
+            android:textSize="15sp"
+            android:onClick="onClick"
+            android:longClickable="true"
+            android:visibility = "gone"/>
+
+        <Button
+            android:id="@+id/emv_info_button"
+            android:layout_width="100dp"
+            android:layout_height="55dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:text="EMV Details"
+            android:fontFamily="Monospace"
+            android:textSize="15sp"
+            android:onClick="onClick"
+            android:longClickable="true"
+            android:visibility = "gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal" >
+
+        <Button
+            android:id="@+id/read_nfc_button"
+            android:layout_width="100dp"
+            android:layout_height="55dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="Read Tag"
+            android:fontFamily="Monospace"
+            android:textSize="16sp"
+            android:onClick="onClick" />
+
+        <Button
+            android:id="@+id/write_nfc_button"
+            android:layout_width="100dp"
+            android:layout_height="55dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="Write Tag"
+            android:fontFamily="Monospace"
+            android:textSize="15sp"
+            android:onClick="onClick" />
+
+        <Button
+            android:id="@+id/emulate_button"
+            android:layout_width="100dp"
+            android:layout_height="55dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:text="Emulate Tag"
+            android:fontFamily="Monospace"
+            android:textSize="15sp"
+            android:onClick="onClick"
+            android:enabled="false"/>/>
+
+
+    </RelativeLayout>
+
+    <!-- android:textColor="#FF33b5e5" -->
+
+    <Button
+        android:id="@+id/info_button"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="Monospace"
+        android:text="Empty Read Buffer"
+        tools:context=".MainActivity"
+        android:onClick="onClick"
+        android:background="#333"
+        android:textColor="#666"
+        android:layout_margin="4dp"/>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="2dp">
+
+        <TextView
+            android:id="@+id/info_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="Monospace"
+            android:text=""
+            android:textColor="#FFBDD73C"
+            tools:context=".MainActivity" />
+
+    </ScrollView>
+
+</LinearLayout>

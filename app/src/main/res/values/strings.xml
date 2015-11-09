@@ -1,0 +1,6 @@
+<resources>
+
+    <string name="app_name">Classic NFC</string>
+    <string name="title_activity_main">@string/app_name</string>
+
+</resources>

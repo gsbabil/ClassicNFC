@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/optionMenuClearScreen"
+        android:title="Clear Screen" 
+        />
+    
+    <item
+        android:id="@+id/optionMenuLoadSavedTag"
+        android:title="Load Saved Tag"/>
+        
+    <item
+        android:id="@+id/optionMenuEditSavedTag"
+        android:title="Edit Saved Tag" />
+    
+    <item
+        android:id="@+id/optionMenuExit"
+        android:title="Exit"/>
+
+</menu>
